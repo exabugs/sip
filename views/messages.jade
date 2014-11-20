@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome
+
+  form(method="POST")
+    table(border=1)
+      tr
+        td address
+        td: input(type="text" name="address")
+      tr
+        td content
+        td: textarea(cols=30 rows=10 name="content")
+
+    input(type="submit")
