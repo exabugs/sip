@@ -12,8 +12,8 @@ OUTGOING=/var/spool/asterisk/outgoing
 KEY=jtalk_`uuidgen | sed -e "s/-/_/g"`
 
 SOX=/usr/bin/sox
-DIC=/usr/lib64/mecab/dic/ja
-#DIC=${JTALK_HOME}/open_jtalk-1.07/mecab-naist-jdic
+#DIC=/usr/lib64/mecab/dic/ja
+DIC=${JTALK_HOME}/open_jtalk-1.07/mecab-naist-jdic
 
 JTALK_HOME=/usr/src/jtalk
 JTALK=${JTALK_HOME}/open_jtalk-1.07/bin/open_jtalk
