@@ -16,7 +16,6 @@ SOX=/usr/bin/sox
 JTALK_HOME=/usr/src/jtalk
 JTALK=${JTALK_HOME}/open_jtalk-1.07/bin/open_jtalk
 VOICE=${JTALK_HOME}/MMDAgent_Example-1.4/Voice/mei/mei_normal.htsvoice
-#DIC=/usr/lib64/mecab/dic/ja
 DIC=${JTALK_HOME}/open_jtalk-1.07/mecab-naist-jdic
 
 
