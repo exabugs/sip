@@ -9,7 +9,7 @@
 SOUNDS=/var/lib/asterisk/sounds/ja
 OUTGOING=/var/spool/asterisk/outgoing
 
-KEY=jtalk_`uuidgen`
+KEY=jtalk_`uuidgen | sed -e "s/-/_/g"`
 
 SOX=/usr/bin/sox
 
@@ -33,10 +33,10 @@ rm ${SOUNDS}/${KEY}.log
 
 cat << _EOT_ > ${OUTGOING}/${KEY}.call
 Channel: SIP/$1
-Callerid: websystem
+Callerid: "websystem" <${KEY}>
 WaitTime: 30
 Application: Playback
 Data: ${KEY}
 _EOT_
 
-find ${SOUNDS}/jtalk_* -cmin +3 -exec rm -f {} \;
+find ${SOUNDS}/jtalk_* -ctime +3 -exec rm -f {} \;
