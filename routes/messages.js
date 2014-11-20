@@ -21,8 +21,8 @@ router.post('/', function(req, res) {
     req.body['address'],
     req.body['content']
   ];
-  child_process.execFile(file, args, function() {
-
+  child_process.execFile(file, args, function(err) {
+    res.send(err ? 500 : 200);
   });
 });
 
