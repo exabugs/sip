@@ -33,6 +33,8 @@ rm ${SOUNDS}/${KEY}.log
 
 cat << _EOT_ > ${OUTGOING}/${KEY}.call
 Channel: SIP/$1
+Callerid: websystem
+WaitTime: 30
 Application: Playback
 Data: ${KEY}
 _EOT_
